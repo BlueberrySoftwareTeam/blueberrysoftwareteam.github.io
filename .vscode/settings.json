@@ -1,0 +1,17 @@
+{
+    "markdownlint.config": {
+        "default": true,
+        "MD033": {
+            "allowed_elements": [
+                "Badge",
+                "br",
+                "script",
+                "img",
+                "p",
+                "input"
+            ]
+        },
+        "MD025": false,
+        "MD041": false
+    }
+}
