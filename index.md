@@ -10,17 +10,17 @@ hero:
   actions:
     - theme: brand
       text: 规范参考
-      link: /
+      link: /specifications.html
     - theme: alt
       text: 资源
       link: /resources.html
 
 features:
   - title: 专为用户服务
-    details: 规范规定了许多检测项目，禁止应用的恶意行为，始终保持这“为用户服务”的理念
+    details: 通过匿名文件的形式向广大用户搜集反馈
   - title: 筛选优质应用
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+    details: 应用市场可以采用此规范寻找优质应用
   - title: 提升品牌形象
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+    details: 开发商可以借用此规范作为卖点
 ---
 
