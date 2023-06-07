@@ -13,7 +13,7 @@
 * 核心成员
   * Jesse205 <Badge text="发起人" />
   * 难忘的旋律 <Badge type="warning" text="特邀嘉宾" />
-  * mesmss <Badge type="warning" text="特邀嘉宾" />
+  * mesmss
   * dingyi <Badge type="warning" text="特邀嘉宾" />
   * RiverTwilight <Badge type="warning" text="特邀嘉宾" />
   * 深夜、思離愁 <Badge type="warning" text="特邀嘉宾" />
@@ -40,7 +40,7 @@
 
 ---
 
-* 个人话语权计算规则：最大话语权的成员内总话语权/成员数
+* 个人话语权计算规则：最大话语权的成员内总话语权/已投票的该成员数
 * 意见采纳规则：单方面意见总话语权最多
 * 单方面意见总话语权计算规则：单方面的所有人话语权综合
 
