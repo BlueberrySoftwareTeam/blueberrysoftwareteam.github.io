@@ -10,7 +10,8 @@
 符合“蓝色应用”规范的应用可以添加“蓝色应用”标签，吸引更多用户。
 
 * Markdown 标志：<img :src="labelUrl" style="display: inline-block;"/>
-* Material Design 标志（应用商店）：<span class="blueAppBadge" :style="{'background-color': labelColor}">蓝色应用 Lv.{{labelLevel}}</span>
+* Material Design 标志：<span class="skyAppMaterialBadge" :style="{'background-color': labelColor}">蓝色应用 Lv.{{labelLevel}}</span>
+* [Fluent Design 标志](https://fluent2.microsoft.design/components/web/react/badge/usage)：<span class="skyAppFluentBadge" :style="{'background-color': labelColor}">蓝色应用 Lv.{{labelLevel}}</span>
 * 颜色值：<code :style="{color: labelColor}">{{labelColor}}</code>
 * 等级：{{labelLevel}}
 * 分值：{{labelScorce}}
@@ -76,12 +77,36 @@ return '#'+Math.round(r*0x1000000 + g*0x10000 + b*0x100 + 0xFF).toString(16)
 </script>
 
 <style>
-    .blueAppBadge{
+    .skyAppMaterialBadge{
         background-color: #1E88E5;
         font-size: 12px;
         color: white;
-        border-radius: 2px;
+        border-radius: 4px;
         padding: 2px 4px;
-        transition: background-color 0.5s;
+    }
+
+    .skyAppFluentBadge{
+        --fontFamilyBase: 'Segoe UI', 'Segoe UI Web (West European)', -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica Neue', sans-serif;
+        --fontSizeBase200: 12px;
+        --fontWeightSemibold: 600;
+        --lineHeightBase200: 16px;
+        --spacingHorizontalXS: 4px;
+        --spacingHorizontalXXS: 2px;
+        --borderRadiusCircular: 10000px;
+        --colorTransparentStroke: transparent;
+        font-family: var(--fontFamilyBase);
+        font-size: var(--fontSizeBase200);
+        font-weight: var(--fontWeightSemibold);
+        line-height: var(--lineHeightBase200);
+        height: 20px;
+        min-width: 20px;
+        padding: 0 calc(var(--spacingHorizontalXS) + var(--spacingHorizontalXXS));
+        border-radius: var(--borderRadiusCircular);
+        border-color: var(--colorTransparentStroke);
+        color: white;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+
     }
 </style>

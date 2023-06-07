@@ -8,7 +8,8 @@
                 "script",
                 "img",
                 "p",
-                "input"
+                "input",
+                "code"
             ]
         },
         "MD025": false,
