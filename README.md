@@ -2,6 +2,10 @@
 
 蓝色软件组织和蓝色软件的文档
 
+## 文档地址
+
+* Netlify: <https://sky-app-documents.netlify.app/>
+
 ## 安装教程
 
 1. 运行 `yarn install` 安装依赖
