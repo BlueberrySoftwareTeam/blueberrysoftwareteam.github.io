@@ -5,13 +5,17 @@
 * 主题色：<code style="color: #1E88E5;">#1E88E5</code>（Material Design Blue 600）
 * 错误色：<code style="color: #E539;">#E53935</code>（Material Design Red 600）
 
+::: tip
+您可以根据您的软件 UI 设计适当更换这些颜色
+:::
+
 ## 标志
 
 符合“蓝色应用”规范的应用可以添加“蓝色应用”标签，吸引更多用户。
 
 * Markdown 标志：<img :src="labelUrl" style="display: inline-block;"/>
 * Material Design 标志：<span class="skyAppMaterialBadge" :style="{'background-color': labelColor}">蓝色应用 Lv.{{labelLevel}}</span>
-* [Fluent Design 标志](https://fluent2.microsoft.design/components/web/react/badge/usage)：<span class="skyAppFluentBadge" :style="{'background-color': labelColor}">蓝色应用 Lv.{{labelLevel}}</span>
+* [Fluent Design 标志][FDBadge]：<span class="skyAppFluentBadge" :style="{'background-color': labelColor}">蓝色应用 Lv.{{labelLevel}}</span>
 * 颜色值：<code :style="{color: labelColor}">{{labelColor}}</code>
 * 等级：{{labelLevel}}
 * 分值：{{labelScorce}}
@@ -47,6 +51,8 @@ function getSkyAppBgColor(labelScorce){
 您需要在软件内或者软件文档内合适的位置添加查询链接以查询是否被蓝色软件团队收录，以获取用户信任。
 
 * 查询链接：`https://xxxx.xxxx/xxxx/xxxx` <Badge type="info" text="敬请期待" />
+
+[FDBadge]: https://fluent2.microsoft.design/components/web/react/badge/usage
 
 <script setup>
     import { ref, computed } from 'vue';

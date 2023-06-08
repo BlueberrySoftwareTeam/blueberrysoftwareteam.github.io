@@ -4,9 +4,9 @@ titleTemplate: false
 layout: home
 
 hero:
-  name: "文档（编写中）"
-  text: "蓝色应用规范"
-  tagline: 为用户体验设计的规范（试运行）
+  name: "规范文档（编写中）"
+  text: "蓝色应用"
+  tagline: 给用户极致的软件使用体验，让工具回归工具，让生活回归生活（试运行）
   actions:
     - theme: brand
       text: 规范参考
