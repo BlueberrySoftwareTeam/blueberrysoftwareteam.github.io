@@ -9,7 +9,8 @@
                 "img",
                 "p",
                 "input",
-                "code"
+                "code",
+                "span"
             ]
         },
         "MD025": false,

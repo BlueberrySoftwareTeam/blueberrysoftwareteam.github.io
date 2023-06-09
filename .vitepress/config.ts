@@ -21,18 +21,18 @@ export default defineConfig({
       { text: '主页', link: '/' },
       { text: '规范', link: '/specifications.html' },
       { text: '蓝色软件', link: '/apps.html' },
-      { text: '资源', link: '/resourse.html' },
+      { text: '资源', link: '/resources.html' },
       { text: '关于', link: '/about.html' }
     ],
 
     sidebar: [
-      {
+      /*{
         text: 'Examples',
         items: [
           { text: 'Markdown Examples', link: '/markdown-examples' },
           { text: 'Runtime API Examples', link: '/api-examples' }
         ]
-      }
+      }*/
     ],
 
     socialLinks: [

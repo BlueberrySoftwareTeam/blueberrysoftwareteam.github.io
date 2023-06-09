@@ -3,7 +3,7 @@
 ## 颜色
 
 * 主题色：<code style="color: #1E88E5;">#1E88E5</code>（Material Design Blue 600）
-* 错误色：<code style="color: #E539;">#E53935</code>（Material Design Red 600）
+* 错误色：<code style="color: #E53935;">#E53935</code>（Material Design Red 600）
 
 ::: tip
 您可以根据您的软件 UI 设计适当更换这些颜色
