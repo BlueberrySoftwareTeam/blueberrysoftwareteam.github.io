@@ -10,7 +10,7 @@
 
 ---
 
-* Android ![应用栏](./images/examples/definitions/appbar.bmp)
+* Android ![应用栏](./images/examples/definitions/appbar.png)
 
 ---
 
