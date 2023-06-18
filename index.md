@@ -5,8 +5,8 @@ layout: home
 
 hero:
   name: "规范文档（编写中）"
-  text: "蓝色应用"
-  tagline: 给用户极致的软件使用体验，让工具回归工具，让生活回归生活（试运行）
+  text: "蓝莓应用"
+  tagline: 给用户极致的软件使用体验，让工具回归工具，让生活回归生活，像蓝莓一样爽（试运行）
   actions:
     - theme: brand
       text: 规范参考
@@ -17,7 +17,7 @@ hero:
 
 features:
   - title: 专为用户服务
-    details: 通过匿名文件的形式向广大用户搜集反馈
+    details: 通过匿名问卷的形式向广大用户搜集反馈
   - title: 筛选优质应用
     details: 应用市场可以采用此规范寻找优质应用
   - title: 提升品牌形象

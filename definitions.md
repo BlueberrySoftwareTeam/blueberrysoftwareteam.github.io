@@ -24,6 +24,6 @@
 
 状态栏一般由系统提供这种状态栏叫做“系统状态栏 (System status bar)”，但是在一些情况下，应用也有自己的状态栏，叫做“应用内状态栏 (The status bar in application)”
 
-参考链接
+## 参考链接
 
 * [UI设计知识系列 二、界面中的“栏”](https://zhuanlan.zhihu.com/p/60171900) - 知乎

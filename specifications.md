@@ -31,9 +31,9 @@
 * P******
 * 氵**力
 
-### 默认关闭开屏广告
+### 无开屏广告
 
-默认关闭在软件首页之前显示广告
+取消在软件首页之前显示广告，并删除相关代码
 
 > 添加开屏广告后会严重拖慢软件启动时间。\
 > 在现代软件越来越臃肿以及软件厂商在想方设法添加更多开屏广告的趋势下，非常影响用户体验。
@@ -46,7 +46,7 @@
 
 ---
 
-::: warning
+细节：
 
 * 如果自定义启动页（基于主题和系统以外的）拥有渲染时间，除非以下情况，否则一律视为开屏广告。
   * 准备首次启动时必要数据
@@ -54,16 +54,11 @@
   * 大型 Studio、IDE、编辑类等需要准备大量数据的软件除外
   * 框架问题，如：PWA 应用、Fusion App
 * 如果用户在回到软件时软件当前页面**没有被杀掉**，则**不能出现开屏页面**，否则一律视为开屏广告。
-
----
-
-* 已知必须启动时准备数据的框架：AndroLua+、Fusion App
-:::
+* **不可以自动弹出开启开屏广告的提醒**，否则视为开屏广告默认开启。
 
 ::: tip
 
-* 您可以在设置内添加开关以允许用户打开开屏广告。
-* 您不可以自动弹出开启开屏广告的提醒，否则视为开屏广告默认开启。
+* 已知必须启动时准备数据的框架：AndroLua+、Fusion App
 
 :::
 
@@ -259,11 +254,16 @@
 规范：
 
 * Android：[Material Design](https://material.io/)
-* Windows：[Fluent Design](https://fluent2.microsoft.design/) | [Windows 11 设计指南](https://learn.microsoft.com/zh-cn/windows/apps/design/) | [Windows 7 设计指南](https://learn.microsoft.com/zh-cn/windows/win32/uxguide/guidelines)
+  * HarmonyOS：HarmonyOS Design
+* Windows：[Fluent Design](https://fluent2.microsoft.design/)
+  | [Windows 11 设计指南](https://learn.microsoft.com/zh-cn/windows/apps/design/)
+  | [Windows 7 设计指南](https://learn.microsoft.com/zh-cn/windows/win32/uxguide/guidelines)
 * iOS：[针对 iOS 设计](https://developer.apple.com/cn/design/human-interface-guidelines/designing-for-ios)
 * MacOS：[针对 MacOS 设计](https://developer.apple.com/cn/design/human-interface-guidelines/designing-for-macos)
 * iPadOS：[针对 iPadOS 设计](https://developer.apple.com/cn/design/human-interface-guidelines/designing-for-ipados)
 * Linux：未知
+  * HarmonyOS：同 `Android > HarmonyOS`
+  * Windows：同 `Windows`
 
 ### 设计优秀
 
