@@ -2,7 +2,7 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "蓝色应用",
+  title: "蓝莓应用",
   description: "A VitePress Site",
   ignoreDeadLinks: true,
   lastUpdated: true,
@@ -20,7 +20,7 @@ export default defineConfig({
     nav: [
       { text: '主页', link: '/' },
       { text: '规范', link: '/specifications.html' },
-      { text: '蓝色软件', link: '/apps.html' },
+      { text: '蓝莓软件', link: '/apps.html' },
       { text: '资源', link: '/resources.html' },
       { text: '关于', link: '/about.html' }
     ],

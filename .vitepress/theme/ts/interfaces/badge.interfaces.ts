@@ -1,0 +1,1 @@
+export type BlueberryBadgeTheme = 'material2' | 'fluent2' 

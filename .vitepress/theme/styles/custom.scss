@@ -1,3 +1,4 @@
+@import url(./blueberry.scss);
 :root {
   /* Base Colors */
   /* https://github.com/chromium/chromium/blob/main/ui/chromeos/styles/cros_palette.json5 */
@@ -10,16 +11,16 @@
   --c-google-blue-800: #185abc;
 
   /* Theme Colors */
-  --vp-c-brand: var(--c-google-blue-600);
-  --vp-c-brand-light: var(--c-google-blue-500);
-  --vp-c-brand-lighter: var(--c-google-blue-400);
-  --vp-c-brand-dark: var(--c-google-blue-700);
-  --vp-c-brand-darker: var(--c-google-blue-800);
+  --vp-c-brand: var(--c-mdui-indigo-600);
+  --vp-c-brand-light: var(--c-mdui-indigo-500);
+  --vp-c-brand-lighter: var(--c-mdui-indigo-400);
+  --vp-c-brand-dark: var(--c-mdui-indigo-700);
+  --vp-c-brand-darker: var(--c-mdui-indigo-800);
 
   /* Badges */
   --vp-badge-tip-border: var(--vp-c-brand-dark);
   --vp-badge-tip-text: var(--vp-c-brand);
-  --vp-badge-tip-bg: var(--c-google-blue-50-alpha);
+  --vp-badge-tip-bg: var(--c-google-mdui-indigo-alpha);
 
   /* Custom Blocks */
   --vp-custom-block-tip-border: var(--vp-c-brand);
