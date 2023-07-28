@@ -10,7 +10,8 @@
                 "p",
                 "input",
                 "code",
-                "span"
+                "span",
+                "div"
             ]
         },
         "MD025": false,
