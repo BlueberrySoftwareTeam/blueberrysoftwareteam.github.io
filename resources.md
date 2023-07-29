@@ -3,7 +3,8 @@
 ## 颜色
 
 - 主题色：
-  - Material Design： Blue 600 <code style="color: #3F51B5;">#3F51B5</code>
+  - Material Design： Blue 600 <code style="color: #1E88E5;">#1E88E5</code>
+  - Fluent Design： colorPaletteBlueBorderActive <code style="color: #0078d4;">#0078d4</code>
 - 危险色：
   - Material Design： Red 600 <code style="color: #E53935;">#E53935</code>
 
@@ -16,9 +17,8 @@
 符合“蓝色应用”规范的应用可以添加“蓝色应用”标签，吸引更多用户。
 
 - Markdown 标志：<img :src="labelUrl" style="display: inline-block;"/>
-- Material Design 标志：<span class="skyAppMaterialBadge" :style="{'background-color': labelColor}">蓝色应用 Lv.{{labelLevel}}</span>
-- [Fluent Design 标志][FDBadge]：<span class="skyAppFluentBadge" :style="{'background-color': labelColor}">蓝色应用 Lv.{{labelLevel}}</span>
-- 颜色值：<code :style="{color: labelColor}">{{labelColor}}</code>
+- [Material Design 标志][MDBadge]：<code :style="{color: materialLabelColor}">{{materialLabelColor}}</code> <BlueberryBadge theme="material2" :score="labelScorce"/>
+- [Fluent Design 标志][FDBadge]：<BlueberryBadge theme="fluent2" :score="labelScorce"/>
 - 等级：{{labelLevel}}
 - 分值：{{labelScorce}}
 
@@ -40,7 +40,7 @@ function getBadgeColor(primaryColor, dangerColor, score) {
     const r = Math.round(getColor(primaryColor, 0x1000000) * percent + getColor(dangerColor, 0x1000000) * (1 - percent))
     const g = Math.round(getColor(primaryColor, 0x10000) * percent + getColor(dangerColor, 0x10000) * (1 - percent))
     const b = Math.round(getColor(primaryColor, 0x100) * percent + getColor(dangerColor, 0x100) * (1 - percent))
-    return '#' + Math.round(r * 0x1000000 + g * 0x10000 + b * 0x100 + 0xFF).toString(16)
+    return '#' + Math.round(r * 0x1000000 + g * 0x10000 + b * 0x100 + 0xFF).toString(16).padStart(8, '0')
 }
 ```
 
@@ -50,7 +50,7 @@ function getBadgeColor(primaryColor: number, dangerColor: number, score: number)
     const r = Math.round(getColor(primaryColor, 0x1000000) * percent + getColor(dangerColor, 0x1000000) * (1 - percent))
     const g = Math.round(getColor(primaryColor, 0x10000) * percent + getColor(dangerColor, 0x10000) * (1 - percent))
     const b = Math.round(getColor(primaryColor, 0x100) * percent + getColor(dangerColor, 0x100) * (1 - percent))
-    return '#' + Math.round(r * 0x1000000 + g * 0x10000 + b * 0x100 + 0xFF).toString(16)
+    return '#' + Math.round(r * 0x1000000 + g * 0x10000 + b * 0x100 + 0xFF).toString(16).padStart(8, '0')
 }
 ```
 
@@ -63,67 +63,29 @@ function getBadgeColor(primaryColor: number, dangerColor: number, score: number)
 
 - 查询链接：`https://xxxx.xxxx/xxxx/xxxx` <Badge type="info" text="敬请期待" />
 
+[MDBadge]: http://m3.material-io.cn/components/badges/specs
 [FDBadge]: https://fluent2.microsoft.design/components/web/react/badge/usage
 
 <script setup>
+    import {getBadgeColor} from '.vitepress/theme/utils/blueberry.ts'
+    import BlueberryBadge from '.vitepress/theme/components/BlueberryBadge.vue'
+    import Emoji from '.vitepress/theme/components/Emoji.vue'
     import { ref, computed } from 'vue';
     const SCORCE_MAX = 100
     const SCORCE_MIN = 60
-    const COLOR_PRIMARY = 0x1E88E5FF
-    const COLOR_DANGER = 0xE53935FF
+    const COLOR_MD_PRIMARY = 0x1E88E5FF
+    const COLOR_MD_DANGER = 0xE53935FF
 
     const labelScorce = ref(SCORCE_MAX)
-    const labelColor = computed(() => {
-        const percent = labelScorce.value / 100
-const r = Math.round(getColor(COLOR_PRIMARY, 0x1000000)*percent + getColor(COLOR_DANGER, 0x1000000)*(1 - percent))
-const g = Math.round(getColor(COLOR_PRIMARY, 0x10000)*percent + getColor(COLOR_DANGER, 0x10000)*(1 - percent))
-const b = Math.round(getColor(COLOR_PRIMARY, 0x100)*percent + getColor(COLOR_DANGER, 0x100)*(1 - percent))
-
-return '#'+Math.round(r*0x1000000 + g*0x10000 + b*0x100 + 0xFF).toString(16)
-    })
     const labelLevel = computed(()=> Math.round((labelScorce.value-60)/10+1))
+    const materialLabelColor=computed(()=>{
+        return getBadgeColor(COLOR_MD_PRIMARY,COLOR_MD_DANGER,labelScorce.value)
+    })
+
     const labelUrl = ref('')
-    function updateLabelUrl(){
-        labelUrl.value=`https://img.shields.io/badge/蓝色应用-Lv.${labelLevel.value}-${labelColor.value.toString(16).replace('#','%23')}`
-    }
-    function getColor(color, index) {
-        return (color / index) & 0xFF
+    function updateLabelUrl() {
+        labelUrl.value=`https://img.shields.io/badge/蓝色应用-Lv.${labelLevel.value}-${materialLabelColor.value.toString(16).replace('#','%23')}`
     }
     updateLabelUrl()
 
 </script>
-
-<style>
-    .skyAppMaterialBadge{
-        background-color: #1E88E5;
-        font-size: 12px;
-        color: white;
-        border-radius: 4px;
-        padding: 2px 4px;
-    }
-
-    .skyAppFluentBadge{
-        --fontFamilyBase: 'Segoe UI', 'Segoe UI Web (West European)', -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica Neue', sans-serif;
-        --fontSizeBase200: 12px;
-        --fontWeightSemibold: 600;
-        --lineHeightBase200: 16px;
-        --spacingHorizontalXS: 4px;
-        --spacingHorizontalXXS: 2px;
-        --borderRadiusCircular: 10000px;
-        --colorTransparentStroke: transparent;
-        font-family: var(--fontFamilyBase);
-        font-size: var(--fontSizeBase200);
-        font-weight: var(--fontWeightSemibold);
-        line-height: var(--lineHeightBase200);
-        height: 20px;
-        min-width: 20px;
-        padding: 0 calc(var(--spacingHorizontalXS) + var(--spacingHorizontalXXS));
-        border-radius: var(--borderRadiusCircular);
-        border-color: var(--colorTransparentStroke);
-        color: white;
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-
-    }
-</style>

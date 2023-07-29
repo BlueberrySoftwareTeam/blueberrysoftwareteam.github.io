@@ -10,37 +10,38 @@ const props = defineProps<{
 
 const SCORCE_MAX = 100
 const SCORCE_MIN = 60
-const COLOR_PRIMARY = 0x1E88E5FF
+const COLOR_MD_PRIMARY = 0x1E88E5FF
+const COLOR_FD_PRIMARY = 0x0078d4FF
 const COLOR_DANGER = 0xE53935FF
 
-const labelScorce = ref(SCORCE_MAX)
-const labelColor = computed(() => {
-    return getBadgeColor(COLOR_PRIMARY, COLOR_DANGER, labelScorce.value)
+const mdLabelColor = computed(() => {
+    return getBadgeColor(COLOR_MD_PRIMARY, COLOR_DANGER, props.score)
 })
-const labelLevel = computed(() => Math.round((labelScorce.value - 60) / 10 + 1))
+const fdLabelColor = computed(() => {
+    return getBadgeColor(COLOR_FD_PRIMARY, COLOR_DANGER, props.score)
+})
+const labelLevel = computed(() => Math.round((props.score - 60) / 10 + 1))
 
 
 </script>
 
 <template>
-    <span v-if="props.theme === 'material2'" class="skyAppFluentBadge" :style="{ 'background-color': getBadgeColor(COLOR_PRIMARY, COLOR_DANGER, labelScorce) }">
-        蓝色应用 Lv.{{ labelLevel }}
-    </span>
-    <span v-else class="skyAppMaterialBadge" :style="{ 'background-color': getBadgeColor(COLOR_PRIMARY, COLOR_DANGER, labelScorce) }">
-        蓝色应用 Lv.{{ labelLevel }}
+    <span v-if="props.theme === 'material2'" class="blueberryAppMaterialBadge"
+        :style="{ 'background-color': mdLabelColor }">蓝莓应用 Lv.{{ labelLevel }}</span>
+    <span v-else class="blueberryAppFluentBadge" :style="{ 'background-color': fdLabelColor }">蓝莓应用 Lv.{{ labelLevel }}
     </span>
 </template>
 
 <style scoped>
-.skyAppMaterialBadge {
-    background-color: #1E88E5;
+.blueberryAppMaterialBadge {
+    background-color: #3F51B5;
     font-size: 12px;
     color: white;
     border-radius: 4px;
     padding: 2px 4px;
 }
 
-.skyAppFluentBadge {
+.blueberryAppFluentBadge {
     --fontFamilyBase: 'Segoe UI', 'Segoe UI Web (West European)', -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica Neue', sans-serif;
     --fontSizeBase200: 12px;
     --fontWeightSemibold: 600;
@@ -62,6 +63,6 @@ const labelLevel = computed(() => Math.round((labelScorce.value - 60) / 10 + 1))
     display: inline-flex;
     justify-content: center;
     align-items: center;
-}
 
+}
 </style>

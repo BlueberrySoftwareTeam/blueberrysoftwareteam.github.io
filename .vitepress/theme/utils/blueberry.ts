@@ -23,5 +23,5 @@ export function getBadgeColor(primaryColor: number, dangerColor: number, score: 
     const r = Math.round(getColor(primaryColor, 0x1000000) * percent + getColor(dangerColor, 0x1000000) * (1 - percent))
     const g = Math.round(getColor(primaryColor, 0x10000) * percent + getColor(dangerColor, 0x10000) * (1 - percent))
     const b = Math.round(getColor(primaryColor, 0x100) * percent + getColor(dangerColor, 0x100) * (1 - percent))
-    return '#' + Math.round(r * 0x1000000 + g * 0x10000 + b * 0x100 + 0xFF).toString(16)
+    return '#' + Math.round(r * 0x1000000 + g * 0x10000 + b * 0x100 + 0xFF).toString(16).padStart(8, '0')
 }

@@ -32,7 +32,7 @@
 通常情况下，“应用栏”是指“顶部应用栏”。
 :::
 
-### 顶部应用栏（Top app bar）
+### 顶部应用栏 (Top app bar)
 
 顶部应用栏位于屏幕的顶部，但在状态栏下方。
 
@@ -79,7 +79,7 @@
 - [导航栏](https://developer.apple.com/cn/design/human-interface-guidelines/navigation-bars) - Apple 开发者文档
 - [标题栏](https://developer.harmonyos.com/cn/docs/design/des-guides/title-bar-0000001156785281) - HarmonyOS 设计
 
-### 底部应用栏
+### 底部应用栏 (Bottom app bar)
 
 敬请期待
 
@@ -123,7 +123,7 @@
     <img src="./images/examples/definitions/hmdesign/title-bar.webp"/>
     </div>
 
-### 应用内状态栏
+### 应用内状态栏 (App status bar)
 
 应用内状态栏一般在视频播放页面等全屏场景下比较常见，他们跟随应用的页面同时出现或者消失。
 
@@ -135,7 +135,7 @@
 一般情况下，“导航栏”是指“系统导航栏”。
 :::
 
-### 系统导航栏
+### 系统导航栏 (System navigation bar)
 
 未完待续
 
@@ -152,11 +152,15 @@
 
 :::
 
-### 底部应用导航栏
+### 底部应用导航栏 (App bottom navigation bar)
 
 底部应用栏位于屏幕底部，通常包含 2-5 个项目
 
 底部应用导航栏可让用户在较小的设备上切换用户界面视图。
+
+::: tip
+通常情况下，“底部导航栏”是指“底部应用导航栏”。
+:::
 
 ::: info 叫法区别
 
@@ -180,7 +184,7 @@
     <img src="./images/examples/definitions/apple/tab-bar.webp"/>
     </div>
 
-### 侧边应用导航栏 (Navigation rail)
+### 侧边应用导航栏 (App navigation rail)
 
 侧边应用导航栏可让用户在中型设备上切换用户界面视图。
 
@@ -198,10 +202,14 @@
 
 :::
 
+::: tip
+通常情况下，“侧边导航栏”是指“侧边应用导航栏”。
+:::
+
 ::: info 叫法区别
 
 - Android (Material Design)：导航栏杆
-- iOS：**Fluent Design 可能没有侧边导航栏**
+- iOS：**iOS 可能没有侧边导航栏**
 - Windows (Fluent Design): **Fluent Design 可能没有侧边导航栏，但是 Microsoft Store 拥有。**
 - HarmonyOS Design：侧边导航栏
 
@@ -215,18 +223,44 @@
     <div class="screenshotList part">
     <img src="./images/examples/definitions/navigation-rail.webp"/>
     </div>
-<!-- - Windows (Fluent Design)
-    <div class="screenshotList part">
-    <img src="./images/examples/definitions/fluent/titlebar.png"/>
-    </div> -->
 - HarmonyOS Design
     <div class="screenshotList part">
     <img src="./images/examples/definitions/hmdesign/sidebar.webp"/>
     </div>
 
-## 侧滑栏/导航抽屉
+### 侧滑栏/导航抽屉 (Navigation drawer)
 
 导航抽屉可让用户在较大的设备上切换用户界面视图。
+
+::: info 叫法区别
+
+- Android (Material Design)：导航抽屉
+- iOS：边栏
+- Windows (Fluent Design): 导航视图
+- HarmonyOS Design：侧边导航栏
+
+:::
+
+---
+
+**示例图：**
+
+- Android (Material Design)
+    <div class="screenshotList part">
+    <img src="./images/examples/definitions/navigation-drawer.webp"/>
+    </div>
+- iOS
+    <div class="screenshotList part">
+    <img src="./images/examples/definitions/apple/sidebar.png"/>
+    </div>
+- Windows (Fluent Design)
+    <div class="screenshotList part">
+    <img src="./images/examples/definitions/fluent/navigation-view.webp"/>
+    </div>
+- HarmonyOS Design
+    <div class="screenshotList part">
+    <img src="./images/examples/definitions/hmdesign/sidebar-drawer.webp"/>
+    </div>
 
 ## 对话框
 

@@ -11,7 +11,8 @@
                 "input",
                 "code",
                 "span",
-                "div"
+                "div",
+                "BlueberryBadge"
             ]
         },
         "MD025": false,
